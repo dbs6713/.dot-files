@@ -1,0 +1,38 @@
+# quick config
+alias config='git --git-dir=$HOME/.dot-files/ --work-tree=$HOME'
+alias dailybrew='brew upgrade; brew cleanup -s --force; brew doctor'
+alias omz='$EDITOR ~/.oh-my-zsh'
+alias zc='$EDITOR ~/.zshrc'
+alias hosts='sudo $EDITOR /etc/hosts'
+
+# golang
+alias gotest='go test -covermode=count -coverprofile=coverage.out'
+alias gocover='gotest && go tool cover -html=coverage.out'
+
+# shorten common commands
+alias git='/usr/local/bin/git'
+alias l='exa -abghHliS'
+alias lt='exa -bghHliS --tree'
+alias h='history'
+alias ha='history 1'
+alias hg='history 1|grep'
+alias po='popd'
+alias sndb='pushd ~/Sandbox'
+alias top='sudo htop'
+alias ql='qlmanage -p'
+alias vim='mvim'
+
+# file cleanup
+alias fcln="find . -type f -name '*.DS_Store' -ls -delete"
+
+# ip
+alias ip='curl ipinfo.io/ip'
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# misc
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'";
+alias ack=ag
+alias caff="caffeinate -dis"
+alias currentdate='date "+%Y.%m.%d"'
+alias tailf="less +F $0"
+alias sha256="shasum -a 256 "$1" "
